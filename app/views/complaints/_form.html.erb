@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= form.label :tag_id %>
-    <%= form.number_field :tag_id %>
+    <%= form.collection_select :tag_id, Tag.all, :id, :tag_name, include_blank: true%>
   </div>
 
   <div class="field">
