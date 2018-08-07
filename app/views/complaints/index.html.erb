@@ -8,8 +8,6 @@
       <th>Tag</th>
       <th>Subject</th>
       <th>Description</th>
-      <th>Status</th>
-      <th>User</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,11 +15,9 @@
   <tbody>
     <% @complaints.each do |complaint| %>
       <tr>
-        <td><%= complaint.tag_id %></td>
+        <td><%= complaint.tag.tag_name %></td>
         <td><%= complaint.subject %></td>
         <td><%= complaint.description %></td>
-        <td><%= complaint.status %></td>
-        <td><%= complaint.user_id %></td>
         <td><%= link_to 'Show', complaint %></td>
         <td><%= link_to 'Edit', edit_complaint_path(complaint) %></td>
         <td><%= link_to 'Destroy', complaint, method: :delete, data: { confirm: 'Are you sure?' } %></td>
