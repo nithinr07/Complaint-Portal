@@ -3,8 +3,10 @@
     <div class="navbar is-light">
         <div class="navbar-menu">
             <div class="navbar-left">
-                <a class="navbar-item is-active">Open Issues</a>
-                <a class="navbar-item">Closed Issues</a>
+                <%= link_to 'Open Issues', current_issues_path, class: "navbar-item is-active" %>
+                
+                <%= link_to 'Closed Issues', closed_issues_path, class: "navbar-item" %>
+                
             </div>
             <div class="navbar-right">
                 <a class="navbar-item">Sort</a>
@@ -14,13 +16,17 @@
     </div>
 </div>
 <div class="alert is-white container" style="border: 1px solid grey">
+    <% @issues.each do |x| %>
     <div class="issue">
         <div class="issues-info">
-            <div class="issue-subject">Some random issue</div>
-            <div class="issue-date">29 aug 2018</div>
+            <div class="issue-subject"><%= link_to x.subject, complaint_path(x.id) %></div>
+            <div class="issue-date"><%= x.created_at %></div>
         </div>
-        <div class="issue-setting">
-            settings
+        <div class="badge is-danger">
+            <%= x.tag.tag_name %>
         </div>
     </div>
+    <br>
+    <% end %>
 </div>
+
