@@ -1,0 +1,27 @@
+.issue{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.issues-info{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start
+}
+
+.issue-subject{
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.issue-date{
+    font-size: 1em;
+    font-weight: normal;
+}
+
+
+.issue-setting{
+}
+
