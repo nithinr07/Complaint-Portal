@@ -11,22 +11,29 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :tag_id %>
-    <%= form.collection_select :tag_id, Tag.all, :id, :tag_name, include_blank: true%>
+<div class="hero is-light">
+        <div class="hero-body">
+        <div class="block">
+        <h1>New Complaint</h1>
+
+        </div>
+  <div class="column is-4 container">
+  <div class="field block select">
+    <%= form.collection_select :tag_id, Tag.all, :id, :tag_name, include_blank: 'Select Tag'%>
   </div>
 
-  <div class="field">
-    <%= form.label :subject %>
-    <%= form.text_field :subject %>
+  <div class="field block">
+    <%= form.text_field :subject, class: 'input', placeholder: 'Subject' %>
   </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description %>
+  <div class="field block">
+    <%= form.text_field :description, class: 'textarea', placeholder: 'Description' %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit%>
   </div>
+  </div>
+        </div>
+</div>
 <% end %>
