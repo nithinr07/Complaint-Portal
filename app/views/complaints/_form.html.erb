@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= form.label :tag_id %>
-    <%= form.number_field :tag_id %>
+    <%= form.collection_select :tag_id, Tag.all, :id, :tag_name, include_blank: true%>
   </div>
 
   <div class="field">
@@ -24,16 +24,6 @@
   <div class="field">
     <%= form.label :description %>
     <%= form.text_field :description %>
-  </div>
-
-  <div class="field">
-    <%= form.label :status %>
-    <%= form.check_box :status %>
-  </div>
-
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.check_box :user_id %>
   </div>
 
   <div class="actions">

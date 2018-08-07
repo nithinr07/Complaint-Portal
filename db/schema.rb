@@ -10,14 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_07_172926) do
+ActiveRecord::Schema.define(version: 2018_08_07_181047) do
 
   create_table "complaints", force: :cascade do |t|
     t.integer "tag_id"
     t.string "subject"
     t.string "description"
-    t.boolean "status"
-    t.boolean "user_id"
+    t.boolean "status", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
