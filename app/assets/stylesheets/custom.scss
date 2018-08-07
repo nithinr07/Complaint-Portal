@@ -3,7 +3,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding:1em;
 }
+
+.issue a{
+    color: rgb(26, 26, 26);
+}
+.issue:hover{
+    background-color: rgb(204, 204, 248);
+}
+
 
 .issues-info{
     display: flex;

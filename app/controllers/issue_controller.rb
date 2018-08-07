@@ -4,6 +4,6 @@ class IssueController < ApplicationController
   end
 
   def closed_issues
-
+  	@issues = Complaint.where(:status => true)
   end 
 end
