@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   resources :locations
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :tags
-  resources :complaints, :except => [:index]
+  resources :complaints, :except => [:index, :new]
+  get '/complaints/new/:id', to: 'complaints#new'
   root 'static_pages#home'
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
