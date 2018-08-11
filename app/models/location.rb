@@ -1,4 +1,4 @@
 class Location < ApplicationRecord
-    has_one :tag
+    has_many :tags
     belongs_to :structure
 end
