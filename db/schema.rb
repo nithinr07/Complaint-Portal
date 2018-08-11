@@ -10,13 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_07_191551) do
+ActiveRecord::Schema.define(version: 2018_08_11_120619) do
 
   create_table "complaints", force: :cascade do |t|
     t.integer "tag_id"
     t.string "subject"
     t.string "description"
     t.boolean "status", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "locations", force: :cascade do |t|
+    t.integer "tag_id"
+    t.integer "structure_id"
+    t.string "link"
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "structures", force: :cascade do |t|
+    t.string "type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
