@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :structures
+  resources :locations
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :tags
   resources :complaints, :except => [:index]

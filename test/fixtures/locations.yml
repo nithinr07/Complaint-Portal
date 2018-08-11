@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tag_id: 1
+  structure_id: 1
+  link: MyString
+  name: MyString
+
+two:
+  tag_id: 1
+  structure_id: 1
+  link: MyString
+  name: MyString
