@@ -16,7 +16,7 @@
   </div>
 
   <div class="field block select">
-    <%= form.collection_select :structure_id, Structure.all, :id, :Structure_name, include_blank: 'Select Structure'%>
+    <%= form.collection_select :structure_id, Structure.all, :id, :type_name, include_blank: 'Select Structure'%>
   </div>
 
   <div class="hidden-field">
