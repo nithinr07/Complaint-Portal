@@ -19,7 +19,7 @@
     <%= form.collection_select :structure_id, Structure.all, :id, :Structure_name, include_blank: 'Select Structure'%>
   </div>
 
-  <div class="field">
+  <div class="hidden-field">
     <%= form.label :link %>
     <%= form.text_field :link %>
   </div>
