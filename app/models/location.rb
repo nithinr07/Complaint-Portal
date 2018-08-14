@@ -1,4 +1,4 @@
 class Location < ApplicationRecord
-    has_many :tags
+    has_many :complaints
     belongs_to :structure
 end
