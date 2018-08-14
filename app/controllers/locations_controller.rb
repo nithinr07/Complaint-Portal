@@ -15,6 +15,7 @@ class LocationsController < ApplicationController
   # GET /locations/new
   def new
     @location = Location.new
+    @url = SecureRandom.hex(10)
   end
 
   # GET /locations/1/edit

@@ -17,9 +17,10 @@
 
   <div class="hidden-field">
     <%= form.label :link %>
-    <%= form.text_field :link %>
+    <%= form.text_field :link , id: "link_url"%>
+    <span> or </span>
+    <span class="badge is-info is-medium" style="cursor:pointer;" id="<%= @url %>" onclick="var element = document.getElementById('link_url'); element.value = window.location.origin + '/complaints/new' + this.id;"> Generate Link</span>
   </div>
-
   <div class="field">
     <%= form.label :name %>
     <%= form.text_field :name %>
@@ -29,3 +30,10 @@
     <%= form.submit %>
   </div>
 <% end %>
+
+<script>
+  window.addEventListener("load", function(){
+    var element = document.getElementById('link_url');
+    element.value = "";
+  })
+</script>
