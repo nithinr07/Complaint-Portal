@@ -11,14 +11,12 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :tag_id %>
-    <%= form.number_field :tag_id %>
+  <div class="field block select">
+    <%= form.collection_select :tag_id, Tag.all, :id, :tag_name, include_blank: 'Select Tag'%>
   </div>
 
-  <div class="field">
-    <%= form.label :structure_id %>
-    <%= form.number_field :structure_id %>
+  <div class="field block select">
+    <%= form.collection_select :structure_id, Structure.all, :id, :Structure_name, include_blank: 'Select Structure'%>
   </div>
 
   <div class="field">

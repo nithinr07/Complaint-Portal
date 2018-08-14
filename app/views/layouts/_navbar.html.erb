@@ -3,9 +3,19 @@
 	<div class="navbar-menu">
 		<div class="navbar-left">
 		<%= link_to 'Issues', current_issues_path, class: "navbar-item" %>
+		<% if user_signed_in? %>
+		<%= link_to 'Create Tag', new_tag_path, class: "navbar-item" %>
+		<%= link_to 'Create Structure', new_structure_path, class: "navbar-item" %>
+		<%= link_to 'Create Location', new_location_path, class: "navbar-item" %>
+		<% end %>
 		</div>
 		<div class="navbar-right">
+		<% if !user_signed_in? %>
 		<%= link_to 'Sign In', new_user_session_path, class: "navbar-item" %>
+		<% else %>
+		<%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: "navbar-item" %>
+		<% end %>
 		</div>
+		
 	</div>
 </div>
