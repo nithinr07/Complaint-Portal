@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_14_174456) do
+ActiveRecord::Schema.define(version: 2018_08_14_175933) do
 
   create_table "complaints", force: :cascade do |t|
     t.integer "tag_id"
@@ -23,7 +23,6 @@ ActiveRecord::Schema.define(version: 2018_08_14_174456) do
   end
 
   create_table "locations", force: :cascade do |t|
-    t.integer "tag_id"
     t.integer "structure_id"
     t.string "link"
     t.string "name"
