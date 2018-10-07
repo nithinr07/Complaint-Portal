@@ -1,6 +1,6 @@
 # Complaint Portal
 
-A Complaint POrtal for all your issues !
+A Complaint Portal for all your issues !
 
 ## Getting Started
 
